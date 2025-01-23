@@ -3,18 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Consult a Doctor</title>
+    <title>Consultation - TEAMUNSTOPPABLE Healthcare</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Consult a Doctor</h1>
-        <p>Contact our healthcare professionals for further assistance.</p>
-        <ul>
-            <li>Dr. John Doe - General Physician - +1 234 567 890</li>
-            <li>Dr. Jane Smith - Neurologist - +1 987 654 321</li>
-        </ul>
-        <a href="index.html"><button>Go Back</button></a>
-    </div>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>TEAMUNSTOPPABLE</h1>
+            </div>
+            <ul class="menu">
+                <li><a href="index.html">Back To Home</a></li>
+              
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Consultation Section -->
+    <section id="consultation" class="container">
+        <h2>Consultation</h2>
+        
+        <div id="consultation-recommendation">
+            <p>Based on your symptoms, we highly recommend consulting a doctor for further guidance and treatment. Choose a specialist below to book your appointment:</p>
+
+            <!-- Fever Section -->
+            <div class="consultation-option">
+                <h3>Fever</h3>
+                <p>If you have symptoms like fever, we recommend seeing an Infectious Disease Specialist.</p>
+                <div class="doctor-details">
+                    <p><strong>Doctor Name:</strong> Dr. Ramesh Kumar</p>
+                    <p><strong>Specialization:</strong> Infectious Disease Specialist</p>
+                    <p><strong>Address:</strong> HealthCare Clinic, 123 Medical Street, City</p>
+                    <p><strong>Phone:</strong> +91 98765 43210</p>
+                </div>
+                <button onclick="window.location.href='https://example.com/appointment?specialist=Infectious+Disease+Specialist'">Book Appointment</button>
+            </div>
+
+            <!-- Headache Section -->
+            <div class="consultation-option">
+                <h3>Headache</h3>
+                <p>Headaches can be caused by stress or other conditions. We suggest seeing a Neurologist.</p>
+                <div class="doctor-details">
+                    <p><strong>Doctor Name:</strong> Dr. Priya Mehta</p>
+                    <p><strong>Specialization:</strong> Neurologist</p>
+                    <p><strong>Address:</strong> NeuroCare Center, 456 Brain Avenue, City</p>
+                    <p><strong>Phone:</strong> +91 98765 43211</p>
+                </div>
+                <button onclick="window.location.href='https://example.com/appointment?specialist=Neurologist'">Book Appointment</button>
+            </div>
+
+            <!-- Cough Section -->
+            <div class="consultation-option">
+                <h3>Cough</h3>
+                <p>A persistent cough may indicate respiratory issues. We recommend consulting a Pulmonologist.</p>
+                <div class="doctor-details">
+                    <p><strong>Doctor Name:</strong> Dr. Arun Sharma</p>
+                    <p><strong>Specialization:</strong> Pulmonologist</p>
+                    <p><strong>Address:</strong> PulmoCare Clinic, 789 Lung Street, City</p>
+                    <p><strong>Phone:</strong> +91 98765 43212</p>
+                </div>
+                <button onclick="window.location.href='https://example.com/appointment?specialist=Pulmonologist'">Book Appointment</button>
+            </div>
+
+            <!-- Fatigue Section -->
+            <div class="consultation-option">
+                <h3>Fatigue</h3>
+                <p>If you're feeling overly fatigued, we recommend seeing an Endocrinologist.</p>
+                <div class="doctor-details">
+                    <p><strong>Doctor Name:</strong> Dr. Suresh Gupta</p>
+                    <p><strong>Specialization:</strong> Endocrinologist</p>
+                    <p><strong>Address:</strong> EndoCare Center, 321 Hormone Lane, City</p>
+                    <p><strong>Phone:</strong> +91 98765 43213</p>
+                </div>
+                <button onclick="window.location.href='https://example.com/appointment?specialist=Endocrinologist'">Book Appointment</button>
+            </div>
+
+            <!-- Add more symptoms and doctors here as necessary -->
+
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>© 2025 TEAMUNSTOPPABLE. All Rights Reserved.</p>
+            <div class="social">
+                <a href="#" class="social-link">Facebook</a>
+                <a href="#" class="social-link">Instagram</a>
+                <a href="#" class="social-link">Twitter</a>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
 </body>
 </html>
