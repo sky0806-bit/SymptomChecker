@@ -1,61 +1,340 @@
+/* General Styles */
 body {
-    margin: 0; /* Remove default margin */
-    background-color: #f4f4f4; /* Light gray background for the page */
-    font-family: Arial, sans-serif; /* Font for the rest of the page */
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+    color: #333;
+    scroll-behavior: smooth;
 }
 
+/* Header */
 header {
-    background-color: #4CAF50; /* Green background for header */
-    color: white;             /* White text */
-    padding: 20px 0;          /* Top and bottom padding */
-    text-align: center;       /* Center the text */
-    font-size: 28px;          /* Larger font size */
-    font-weight: bold;        /* Bold text */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a shadow for effect */
+    background: linear-gradient(45deg, #ff7eb3, #ff758c);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    animation: fadeInDown 1s ease;
 }
 
-.container {
-    background-color: white; /* White background for content */
-    padding: 20px;
-    margin: 20px auto;
-    border-radius: 8px;
-    max-width: 600px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+}
+
+.logo h1 {
+    color: white;
+    margin: 0;
+    font-size: 28px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 5px 15px;
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.menu a:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1);
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('https://source.unsplash.com/1920x1080/?healthcare,wellness') no-repeat center center/cover;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
     text-align: center;
 }
 
+.hero h2 {
+    font-size: 52px;
+    margin: 0 0 20px;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+    animation: fadeInDown 1.5s ease;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    animation: fadeInUp 1.5s ease;
+}
+
+.hero .btn {
+    padding: 15px 30px;
+    background: linear-gradient(45deg, #ff7eb3, #ff758c);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.hero .btn:hover {
+    background: linear-gradient(45deg, #ff94c2, #ff839a);
+    transform: scale(1.1);
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Section Containers */
+.container {
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: 30px auto;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    animation: slideIn 1s ease;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 h2 {
-    color: #4CAF50; /* Match header color */
+    color: #ff758c;
+    text-align: center;
     margin-bottom: 20px;
+    position: relative;
 }
 
+h2::after {
+    content: '';
+    width: 80px;
+    height: 4px;
+    background: #ff758c;
+    display: block;
+    margin: 10px auto;
+    border-radius: 2px;
+}
+
+/* Forms */
 form {
-    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
 }
 
-input {
-    padding: 10px;
-    width: 80%;
-    margin: 10px 0;
+input, textarea, button {
+    padding: 12px;
+    font-size: 16px;
     border: 1px solid #ddd;
-    border-radius: 4px;
+    border-radius: 5px;
+    width: 100%;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus, textarea:focus {
+    border-color: #ff758c;
+    box-shadow: 0 0 5px rgba(255, 117, 140, 0.5);
+    outline: none;
 }
 
 button {
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
+    background: linear-gradient(45deg, #ff7eb3, #ff758c);
+    color: white;
+    font-weight: bold;
     cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
 }
 
 button:hover {
-    background-color: #45a049;
+    background: linear-gradient(45deg, #ff94c2, #ff839a);
+    transform: scale(1.05);
 }
 
+/* Footer */
+footer {
+    background: linear-gradient(45deg, #ff7eb3, #ff758c);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+}
+
+footer .social-link {
+    color: white;
+    margin: 0 15px;
+    font-size: 20px;
+    transition: color 0.3s, transform 0.3s;
+}
+
+footer .social-link:hover {
+    color: #fbc2eb;
+    transform: scale(1.2);
+}
+
+footer p {
+    margin: 10px 0 0;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}
+
+/* Enhanced Forms */
+input, textarea, button {
+    padding: 15px; /* Increased padding for a more spacious look */
+    font-size: 16px; /* Increased font size for better readability */
+    border: 1px solid #ddd; 
+    border-radius: 10px; /* Rounded corners for a more modern feel */
+    width: 100%; 
+    transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s; /* Added transition for smooth scaling */
+    box-sizing: border-box; /* Ensures padding doesn’t affect the overall size */
+}
+
+/* Focused Input / Textarea */
+input:focus, textarea:focus {
+    border-color: #ff758c; /* Focus border color */
+    box-shadow: 0 0 8px rgba(255, 117, 140, 0.7); /* More intense box-shadow for focus effect */
+    outline: none; /* Removes default outline */
+    transform: scale(1.02); /* Slight scale-up effect when focused */
+}
+
+/* Buttons */
+button {
+    padding: 18px 30px; /* Bigger padding for a more prominent button */
+    font-size: 16px; /* Slightly larger font for buttons */
+    background: linear-gradient(45deg, #ff7eb3, #ff758c);
+    color: white;
+    border: none;
+    border-radius: 10px; /* Rounded corners */
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s; /* Added box-shadow transition */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for buttons */
+}
+
+/* Hover State for Buttons */
+button:hover {
+    background: linear-gradient(45deg, #ff94c2, #ff839a); /* Slightly different gradient on hover */
+    transform: scale(1.05); /* Slight scale-up effect */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+/* Textarea */
+textarea {
+    resize: vertical; /* Allow vertical resizing */
+    min-height: 120px; /* Set a minimum height */
+    font-family: 'Poppins', sans-serif; /* Matching font */
+}
 #result {
     margin-top: 20px;
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-align: center;
     font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+#result.orange { background-color: #FFEBCC; }
+#result.yellow { background-color: #FFF9CC; }
+#result.blue { background-color: #CCF2FF; }
+#result.green { background-color: #D6FFCC; }
+#result.gray { background-color: #F2F2F2; }
+
+
+/* Consultation Options */
+#consultation-recommendation {
+    margin-top: 30px;
+}
+
+.consultation-option {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.consultation-option h3 {
+    font-size: 24px;
+    color: #ff758c;
+    margin-bottom: 10px;
+}
+
+.consultation-option p {
+    font-size: 16px;
     color: #333;
+    margin-bottom: 15px;
+}
+
+.doctor-details {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.doctor-details p {
+    margin: 5px 0;
+}
+
+button {
+    padding: 12px 20px;
+    font-size: 16px;
+    background: linear-gradient(45deg, #ff7eb3, #ff758c);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover effect for the button */
+button:hover {
+    background: linear-gradient(45deg, #ff94c2, #ff839a);
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
